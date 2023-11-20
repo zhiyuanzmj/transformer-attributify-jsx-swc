@@ -3,14 +3,22 @@
 <!-- @unocss-ignore -->
 
 Support [valueless attributify](https://github.com/unocss/unocss/tree/main/packages/preset-attributify#valueless-attributify) in JSX/TSX. \
-Using [ast-grep](https://github.com/ast-grep/ast-grep) to match attributes, Thanks for [HerringtonDarkholme](https://github.com/HerringtonDarkholme).
+Using [SWC](https://github.com/swc-project/swc) to match attributes.
 
 ### Benchmark
 `pnpm run bench`
 ```
-transformerAttributifyJsx: 1169ms
-transformerAttributifyJsxSwc: 2739ms
-transformerAttributifyJsxBabel: 12806ms
+benchRegexTransform:
+    898 ops/s, ±0.24%   | fastest
+
+benchAstGrepTransform:
+  370 ops/s, ±0.25%   | 58.8% slower
+
+benchSwcTransform:
+  232 ops/s, ±1.01%   | 74.16% slower
+
+benchBabelTransform:
+  72 ops/s, ±3.85%    | slowest, 91.98% slower
 ```
 
 ## Usage
