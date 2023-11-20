@@ -1,7 +1,7 @@
 {
   "name": "transformer-attributify-jsx-swc",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Use SWC to support valueless attributify in JSX/TSX.",
   "author": "zhiyuanzmj <zhiyuanzmj@gmail.com>",
   "license": "MIT",
